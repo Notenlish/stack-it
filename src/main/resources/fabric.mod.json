@@ -1,31 +1,30 @@
 {
 	"schemaVersion": 1,
-	"id": "stack-it",
+	"id": "useful-stacks",
 	"version": "${version}",
-	"name": "Stack-It",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Useful Stacks",
+	"description": "Increases stack sizes of some items to 64 or 16.",
 	"authors": [
-		"Me!"
+		"Notenlish"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/notenlish/stack-it"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/stack-it/icon.png",
+	"icon": "assets/useful-stacks/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.stackit.StackIt"
+			"com.sensiblestacks.SensibleStacks"
 		],
 		"client": [
-			"com.stackit.client.StackItClient"
+			"com.sensiblestacks.client.SensibleStacksClient"
 		]
 	},
 	"mixins": [
-		"stack-it.mixins.json",
+		"sensible-stacks.mixins.json",
 		{
-			"config": "stack-it.client.mixins.json",
+			"config": "sensible-stacks.client.mixins.json",
 			"environment": "client"
 		}
 	],

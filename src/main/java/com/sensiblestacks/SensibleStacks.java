@@ -1,4 +1,4 @@
-package com.stackit;
+package com.usefulstacks;
 
 import net.fabricmc.api.ModInitializer;
 
@@ -11,7 +11,7 @@ import net.minecraft.world.item.Items;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class StackIt implements ModInitializer {
+public class SensibleStacks implements ModInitializer {
 	public static final String MOD_ID = "stack-it";
 
 	// This logger is used to write text to the console and the log file.
@@ -152,6 +152,7 @@ public class StackIt implements ModInitializer {
 				Items.MUSIC_DISC_BLOCKS,
 				Items.MUSIC_DISC_CHIRP,
 				Items.MUSIC_DISC_CREATOR,
+				Items.MUSIC_DISC_CREATOR_MUSIC_BOX,
 				Items.MUSIC_DISC_FAR,
 				Items.MUSIC_DISC_LAVA_CHICKEN,
 				Items.MUSIC_DISC_MALL,
