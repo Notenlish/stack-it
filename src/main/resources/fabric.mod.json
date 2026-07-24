@@ -15,16 +15,16 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.sensiblestacks.SensibleStacks"
+			"com.usefulstacks.UsefulStacks"
 		],
 		"client": [
-			"com.sensiblestacks.client.SensibleStacksClient"
+			"com.usefulstacks.client.UsefulStacksClient"
 		]
 	},
 	"mixins": [
-		"sensible-stacks.mixins.json",
+		"useful-stacks.mixins.json",
 		{
-			"config": "sensible-stacks.client.mixins.json",
+			"config": "useful-stacks.client.mixins.json",
 			"environment": "client"
 		}
 	],

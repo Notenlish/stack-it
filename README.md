@@ -1,4 +1,4 @@
-# Stack-It
+# Useful Stacks
 
 ## Setup
 

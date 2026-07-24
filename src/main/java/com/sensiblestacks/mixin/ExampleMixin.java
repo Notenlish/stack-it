@@ -1,4 +1,4 @@
-package com.usefulstacks.mixin;
+package com.useful.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;

@@ -11,8 +11,8 @@ import net.minecraft.world.item.Items;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class SensibleStacks implements ModInitializer {
-	public static final String MOD_ID = "stack-it";
+public class UsefulStacks implements ModInitializer {
+	public static final String MOD_ID = "useful-stacks";
 
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
@@ -211,7 +211,7 @@ public class SensibleStacks implements ModInitializer {
 		//	});
 		//});
 
-		LOGGER.info("Initialized Stack It! Mod.");
+		LOGGER.info("Initialized Useful Stacks Mod!");
 	}
 
 	public static Identifier id(String path) {
