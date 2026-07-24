@@ -188,6 +188,14 @@ public class UsefulStacks implements ModInitializer {
 				Items.GOLDEN_HORSE_ARMOR,
 				Items.DIAMOND_HORSE_ARMOR,
 				Items.NETHERITE_HORSE_ARMOR,
+				//
+				Items.COPPER_NAUTILUS_ARMOR,
+				Items.IRON_NAUTILUS_ARMOR,
+				Items.GOLDEN_NAUTILUS_ARMOR,
+				Items.DIAMOND_NAUTILUS_ARMOR,
+				Items.NETHERITE_NAUTILUS_ARMOR,
+				//
+				Items.WOLF_ARMOR,
 		};
 
 		DefaultItemComponentEvents.MODIFY.register(context -> {
