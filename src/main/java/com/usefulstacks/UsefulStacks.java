@@ -8,6 +8,7 @@ import net.minecraft.resources.Identifier;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.ColorCollection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,6 +22,9 @@ public class UsefulStacks implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ColorCollection[] stackTo64ColCollection = {
+				//
+		};
 		Item[] stackTo64 = {
 				Items.SUSPICIOUS_STEW,
 				Items.MUSHROOM_STEW,
@@ -62,25 +66,12 @@ public class UsefulStacks implements ModInitializer {
 				//
 				Items.HONEY_BOTTLE,
 		};
+		ColorCollection<Item>[] stackTo16ColCollection = new ColorCollection[] {
+				Items.BED,
+				Items.HARNESS,
+		};
 		Item[] stackTo16 = {
 				Items.SADDLE,
-				//
-				Items.WHITE_HARNESS,
-				Items.BLACK_HARNESS,
-				Items.BLUE_HARNESS,
-				Items.BROWN_HARNESS,
-				Items.CYAN_HARNESS,
-				Items.GRAY_HARNESS,
-				Items.GREEN_HARNESS,
-				Items.LIGHT_BLUE_HARNESS,
-				Items.LIGHT_GRAY_HARNESS,
-				Items.LIME_HARNESS,
-				Items.MAGENTA_HARNESS,
-				Items.ORANGE_HARNESS,
-				Items.PINK_HARNESS,
-				Items.PURPLE_HARNESS,
-				Items.RED_HARNESS,
-				Items.YELLOW_HARNESS,
 				//
 				Items.BIRCH_BOAT,
 				Items.BIRCH_CHEST_BOAT,
@@ -122,22 +113,6 @@ public class UsefulStacks implements ModInitializer {
 				//
 				Items.SPYGLASS,
 				Items.CAKE,
-				Items.WHITE_BED,
-				Items.BLACK_BED,
-				Items.BROWN_BED,
-				Items.BLUE_BED,
-				Items.CYAN_BED,
-				Items.GRAY_BED,
-				Items.GREEN_BED,
-				Items.LIGHT_BLUE_BED,
-				Items.LIGHT_GRAY_BED,
-				Items.LIME_BED,
-				Items.MAGENTA_BED,
-				Items.ORANGE_BED,
-				Items.PINK_BED,
-				Items.PURPLE_BED,
-				Items.RED_BED,
-				Items.YELLOW_BED,
 				//
 				Items.POTION,
 				Items.SPLASH_POTION,
@@ -168,6 +143,7 @@ public class UsefulStacks implements ModInitializer {
 				Items.MUSIC_DISC_PIGSTEP,
 				Items.MUSIC_DISC_PRECIPICE,
 				Items.MUSIC_DISC_TEARS,
+				Items.MUSIC_DISC_BOUNCE,
 				//
 				Items.FLOWER_BANNER_PATTERN,
 				Items.CREEPER_BANNER_PATTERN,
@@ -212,12 +188,24 @@ public class UsefulStacks implements ModInitializer {
 				});
 			}
 		});
-
-		//DefaultItemComponentEvents.MODIFY.register(context -> {
-		//	context.modify(Items.SADDLE, builder -> {
-		//		builder.set(DataComponents.MAX_STACK_SIZE, 16);
-		//	});
-		//});
+		DefaultItemComponentEvents.MODIFY.register(context -> {
+			for (ColorCollection<Item> collection : stackTo16ColCollection) {
+				collection.forEach(item -> {
+					context.modify(item, builder ->
+							builder.set(DataComponents.MAX_STACK_SIZE, 16)
+					);
+				});
+			}
+		});
+		DefaultItemComponentEvents.MODIFY.register(context -> {
+			for (ColorCollection<Item> collection : stackTo64ColCollection) {
+				collection.forEach(item -> {
+					context.modify(item, builder ->
+							builder.set(DataComponents.MAX_STACK_SIZE, 64)
+					);
+				});
+			}
+		});
 
 		LOGGER.info("Initialized Useful Stacks Mod!");
 	}
